@@ -1,15 +1,15 @@
 import sas.*;
 import java.awt.Color;
 
-class Asteroid
+class Starship
 {
     Polygon polygon1,polygon2,polygon3,polygon4,polygon5,polygon6,polygon7,polygon8,polygon9,polygon10,polygon11,polygon12,polygon13,polygon14,polygon15,polygon16,polygon17,polygon18,polygon19,polygon20;
-    double initX, initY;   
+    double initX, initY;
 
-    Asteroid(double pX, double pY)
+    Starship(double pX, double pY)
     {
         // super(pX,pY,pPunkte);   
-        
+
         //#####################################
         //#  SAS P o l y g o n  E d i t o r   #
         //#####################################
@@ -26,77 +26,173 @@ class Asteroid
         //    der Klasse 'Asteroid' kopieren
         //    und in der Klasse 'TestPoly...' testen 
         //#####################################
-       
-        
+
         //#################################################################################################################
         //   I N S E R T   P O L Y G O N   E D I T O R   C O N S O L E   C O D E   H E R E  ! ! ! !
         //#################################################################################################################
+        polygon1 = new Polygon(11,149);
 
-        polygon1 = new Polygon(10,1);
-
-        polygon1.add(30.0,3.0);
-        polygon1.add(30.0,3.0);
-        polygon1.add(30.0,3.0);
-        polygon1.add(39.0,12.0);
-        polygon1.add(39.0,12.0);
-        polygon1.add(39.0,12.0);
-        polygon1.add(40.0,14.0);
-        polygon1.add(41.0,24.0);
-        polygon1.add(63.0,22.0);
-        polygon1.add(60.0,16.0);
-        polygon1.add(60.0,16.0);
-        polygon1.add(60.0,16.0);
-        polygon1.add(30.0,47.0);
-        polygon1.add(30.0,47.0);
-        polygon1.add(19.0,54.0);
-        polygon1.add(19.0,54.0);
-        polygon1.add(19.0,54.0);
-        polygon1.add(13.0,50.0);
-        polygon1.add(-1.0,33.0);
-        polygon1.add(-1.0,33.0);
-        polygon1.add(-1.0,33.0);
-        polygon1.add(-9.0,18.0);
-        polygon1.add(-9.0,18.0);
-        polygon1.add(-9.0,18.0);
-        polygon1.add(-9.0,1.0);
-        polygon1.add(25.0,-3.0);
-        polygon1.add(51.0,1.0);
-        polygon1.add(51.0,1.0);
-        polygon1.add(51.0,1.0);
-        polygon1.add(51.0,1.0);
-        polygon1.add(56.0,14.0);
-        polygon1.add(62.0,25.0);
-        polygon1.add(43.0,41.0);
-        polygon1.add(33.0,48.0);
-        polygon1.add(22.0,56.0);
-        polygon1.add(22.0,56.0);
-        polygon1.add(22.0,56.0);
-        polygon1.add(-1.0,43.0);
+        polygon1.add(182.0,-2.0);
+        polygon1.add(170.0,-98.0);
+        polygon1.add(0.0,-102.0);
+        polygon1.setColor(Color.LIGHT_GRAY);
+        polygon1.setColor(Color.LIGHT_GRAY);
+        polygon1.setColor(Color.LIGHT_GRAY);
+        polygon1.setColor(Color.LIGHT_GRAY);
 
 
-        polygon2 = new Polygon(13,9);
+        polygon2 = new Polygon(-150,-200);
 
-        polygon2.add(12.0,8.0);
-        polygon2.add(11.0,-1.0);
+        polygon2.add(42.0,6.0);
+        polygon2.add(79.0,23.0);
+        polygon2.add(114.0,52.0);
+        polygon2.add(134.0,81.0);
+        polygon2.add(149.0,122.0);
+        polygon2.add(152.0,163.0);
+        polygon2.add(144.0,194.0);
+        polygon2.add(131.0,228.0);
+        polygon2.add(109.0,254.0);
+        polygon2.add(84.0,277.0);
+        polygon2.add(56.0,290.0);
+        polygon2.add(23.0,300.0);
+        polygon2.add(-15.0,300.0);
+        polygon2.add(-55.0,289.0);
+        polygon2.add(-90.0,269.0);
+        polygon2.add(-113.0,247.0);
+        polygon2.add(-131.0,219.0);
+        polygon2.add(-144.0,188.0);
+        polygon2.add(-148.0,150.0);
+        polygon2.add(-144.0,109.0);
+        polygon2.add(-125.0,69.0);
+        polygon2.add(-103.0,41.0);
+        polygon2.add(-76.0,20.0);
+        polygon2.add(-38.0,4.0);
+        polygon2.scale(0.9,0.9);
+        polygon2.scale(0.9,0.9);
+        polygon2.scale(0.9,0.9);
+        polygon2.scale(0.9,0.9);
+        polygon2.scale(0.9,0.9);
+        polygon2.scale(0.9,0.9);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.scale(0.9,0.9);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.scale(0.9,0.9);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.scale(0.9,0.9);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.move(3,0);
+        polygon2.scale(0.9,0.9);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
+        polygon2.move(0,3);
         polygon2.setColor(Color.YELLOW);
-
-
-        polygon3 = new Polygon(32,33);
-
-        polygon3.add(-5.0,6.0);
-        polygon3.add(3.0,7.0);
-        polygon3.add(3.0,7.0);
-        polygon3.add(3.0,7.0);
-        polygon3.add(3.0,7.0);
-        polygon3.add(3.0,7.0);
-        polygon3.add(3.0,7.0);
-        polygon3.setColor(Color.YELLOW);
-
-
-        polygon4 = new Polygon(41,12);
-
-        polygon4.add(-3.0,7.0);
-        polygon4.add(7.0,9.0);
 
         //############################# E N D   O F   I N S E R T E D   C O D E   #########################################
         // 
@@ -126,7 +222,7 @@ class Asteroid
         if (polygon20 != null) {polygon20.move(pX,pY);}
     }
 
-    public void move(double pX, double pY) {    
+    public void move(double pX, double pY) {
         if (polygon1 != null)  {polygon1.move(pX,pY);}
         if (polygon2 != null)  {polygon2.move(pX,pY);}
         if (polygon3 != null)  {polygon3.move(pX,pY);}
@@ -151,7 +247,7 @@ class Asteroid
         initX += pX; initY += pY;
     }
 
-    public void turn(double angle) {    
+    public void turn(double angle) {
         if (polygon1 != null)  {polygon1.turn(initX,initY,angle);}
         if (polygon2 != null)  {polygon2.turn(initX,initY,angle);}
         if (polygon3 != null)  {polygon3.turn(initX,initY,angle);}
@@ -174,5 +270,22 @@ class Asteroid
         if (polygon20 != null) {polygon20.turn(initX,initY,angle);}
 
         // initX = pX; initY = pY;
+    }
+
+
+    public double getX() {
+        return initX;
+    };
+
+    public double getY() {
+        return initY;
+    };
+
+    public void setX(double x) {
+        initX = x;
+    };
+
+    public void setY(double y) {
+        initY = y;
     }
 }
