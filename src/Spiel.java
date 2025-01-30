@@ -41,7 +41,6 @@ public class Spiel
         while(!istEnde){
             if (fenster.keyLeftPressed()){
                 starship.move(-1, 0);
-                System.out.println("asd");
 
                 //paddle1.scale(0.999,1);
             }
@@ -63,14 +62,34 @@ public class Spiel
 
             if(laser != null){
                 laser.setY(laser.getY() -1.5);
-            }
+
+                if(laser.getY() < -100){
+                    laser = null;
+                }
+            };
+
 
             for(int i = 0; i<asteroids.length; i++){
                 asteroids[i].move(0, 0.2);
 
                 if(asteroids[i].getY() > 650){
                     asteroids[i].move(0, -1000);
-                    System.out.println("test");
+
+
+                }
+
+
+                if(laser != null) {
+                    if (laser.getX() > asteroids[i].getX()) {
+                        if (asteroids[i].getX() + 77 > laser.getX()) {
+                            if (laser.getY() == asteroids[i].getY() + 77) {
+                                asteroids[i].move(0, -1000);
+
+                                System.out.println("getroffen");
+                            }
+
+                        }
+                    }
                 }
 
             }

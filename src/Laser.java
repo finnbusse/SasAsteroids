@@ -19,6 +19,10 @@ public class Laser {
         return initY;
     }
 
+    public double getX() {
+        return initX;
+    }
+
     public void setY(double newY) {
         // Differenz ermitteln
         double diff = newY - initY;
@@ -28,5 +32,7 @@ public class Laser {
 
         // neuen Wert merken
         initY = newY;
-    }
+    };
+
+
 }
