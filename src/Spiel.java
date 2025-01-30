@@ -21,10 +21,11 @@ public class Spiel
 
     public Spiel(){
         fenster = new View(800,600);    
-        starship = new Starship(50,300);//        asteroids = new Asteroid[15];     // 2.
-        for (int i = 0; i < asteroids.length; i++){
+        starship = new Starship(50,400);//
+        asteroids = new Asteroid[25];
+        for (int i = 0; i < 25; i++){
 
-            asteroids[i] = new Asteroid(1200+Math.random()*1000,Math.random()*550);
+            asteroids[i] = new Asteroid(Tools.randomNumber(0, 750),-600 + 150 * i);
 
         }
         dx = 4; dy = 4;
@@ -34,13 +35,15 @@ public class Spiel
         istEnde = false;
 
         while(!istEnde){
-            if (fenster.keyUpPressed()){
-                starship.setY(starship.getY()-5);
+            if (fenster.keyLeftPressed()){
+                starship.move(-1, 0);
+                System.out.println("asd");
 
                 //paddle1.scale(0.999,1);
             }
-            if (fenster.keyDownPressed()){
-                starship.setY(starship.getY()+5);
+            if (fenster.keyRightPressed()){
+                starship.move(1, 0);
+
                 //paddle1.scale(0.999,1);
             }
 
@@ -50,17 +53,19 @@ public class Spiel
             }*/
 
 
-            for(int i = 0; i<asteroids.length; i = i +1){
-                asteroids[i].move(-4,0);
-                if (asteroids[i].getX() < -200) {
-                    asteroids[i].move(4600,0);
+            for(int i = 0; i<asteroids.length; i++){
+                asteroids[i].move(0, 0.4);
+
+                if(asteroids[i].getY() > 650){
+                    asteroids[i].move(0, -1000);
+                    System.out.println("test");
                 }
 
             }
             punkte++;
 
             punktestand.setText("Punkte: "+punkte);
-            fenster.wait(10);   
+            fenster.wait(1);
         }
 
     }

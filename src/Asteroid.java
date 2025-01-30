@@ -174,5 +174,29 @@ class Asteroid
         if (polygon20 != null) {polygon20.turn(initX,initY,angle);}
 
         // initX = pX; initY = pY;
+    };
+
+    public double getX() {
+        return initX;
+    };
+
+    public double getY() {
+        return initY;
+    };
+
+    public double getHeight() {
+        return 62;
+    };
+
+    public double getWidth() {
+        return 77;
+    };
+
+    public void setX(double x) {
+        initX = x;
+    };
+
+    public void setY(double y) {
+        initY = y;
     }
 }
