@@ -34,6 +34,7 @@ class SASPolygonEditor
     }
 
     // Konstruktor dieser Klasse
+
     SASPolygonEditor()
     {
         // Initialisierungen

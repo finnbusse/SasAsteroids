@@ -1,0 +1,11 @@
+Aufgaben:
+
+Hindernis Attribute kapseln
+
+getter und setter für x,y,width,height
+
+testen: Objekt inspizieren und holen
+
+Screenshot mit fn+Einfg, dann IrfanView -> messen
+
+danach Kopie in Ordner G:\...\SASPolygonEditor
