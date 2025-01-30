@@ -11,6 +11,7 @@ public class Spiel
     View fenster;
     double dx,dy;
     Asteroid[] asteroids;
+    Laser laser;
 
 
     boolean istEnde;
@@ -22,8 +23,11 @@ public class Spiel
     public Spiel(){
         fenster = new View(800,600);    
         starship = new Starship(50,400);//
-        asteroids = new Asteroid[25];
-        for (int i = 0; i < 25; i++){
+        asteroids = new Asteroid[6];
+
+
+
+        for (int i = 0; i < 6; i++){
 
             asteroids[i] = new Asteroid(Tools.randomNumber(0, 750),-600 + 150 * i);
 
@@ -46,15 +50,23 @@ public class Spiel
 
                 //paddle1.scale(0.999,1);
             }
+            if(fenster.keyPressed(' ')){
+                if (laser == null){
+                    laser = new Laser(starship.getX() +85, starship.getY() - 75);
+                };
+            }
 
             /*if (ball.getShapeY() > 700) {
             istEnde = true;
             new Text(300,200,"G A M E   O V E R").scale(3,3);
             }*/
 
+            if(laser != null){
+                laser.setY(laser.getY() -1.5);
+            }
 
             for(int i = 0; i<asteroids.length; i++){
-                asteroids[i].move(0, 0.4);
+                asteroids[i].move(0, 0.2);
 
                 if(asteroids[i].getY() > 650){
                     asteroids[i].move(0, -1000);
