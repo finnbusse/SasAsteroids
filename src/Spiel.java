@@ -23,13 +23,13 @@ public class Spiel
     public Spiel(){
         fenster = new View(800,600);    
         starship = new Starship(50,400);//
-        asteroids = new Asteroid[6];
+        asteroids = new Asteroid[10];
 
 
 
-        for (int i = 0; i < 6; i++){
+        for (int i = 0; i < 10; i++){
 
-            asteroids[i] = new Asteroid(Tools.randomNumber(0, 750),-600 + 150 * i);
+            asteroids[i] = new Asteroid(Tools.randomNumber(0, 750),-600 + 200 * i);
 
         }
         dx = 4; dy = 4;
@@ -61,7 +61,7 @@ public class Spiel
             }*/
 
             if(laser != null){
-                laser.setY(laser.getY() -1.5);
+                laser.setY(laser.getY() -2);
 
                 if(laser.getY() < -100){
                     laser = null;
@@ -79,18 +79,19 @@ public class Spiel
                 }
 
 
-                if(laser != null) {
-                    if (laser.getX() > asteroids[i].getX()) {
-                        if (asteroids[i].getX() + 77 > laser.getX()) {
-                            if (laser.getY() == asteroids[i].getY() + 77) {
-                                asteroids[i].move(0, -1000);
+                if (laser != null) {
 
-                                System.out.println("getroffen");
-                            }
+                    if (laser.getX() + laser.getWidth() > asteroids[i].getX() &&
+                            laser.getX() < asteroids[i].getX() + asteroids[i].getWidth() &&
+                            laser.getY() + laser.getHeight() > asteroids[i].getY() &&
+                            laser.getY() < asteroids[i].getY() + asteroids[i].getHeight()) {
 
-                        }
+                        asteroids[i].move(0, -750);
+                        laser = null;
+
                     }
                 }
+
 
             }
             punkte++;

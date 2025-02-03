@@ -35,4 +35,12 @@ public class Laser {
     };
 
 
+    public double getHeight() {
+        return 75;
+    };
+
+    public double getWidth() {
+        return 7.5;
+    };
+
 }
