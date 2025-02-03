@@ -13,6 +13,8 @@ public class Spiel
     Asteroid[] asteroids;
     Laser laser;
 
+    boolean gameOver;
+
 
     boolean istEnde;
 
@@ -21,9 +23,14 @@ public class Spiel
     }
 
     public Spiel(){
-        fenster = new View(800,600);    
+        fenster = new View(800,600);
         starship = new Starship(50,400);//
         asteroids = new Asteroid[10];
+
+        gameOver = false;
+
+
+        fenster.setBackgroundColor(Color.BLACK);
 
 
 
@@ -34,11 +41,11 @@ public class Spiel
         }
         dx = 4; dy = 4;
         punkte = 0;
-        punktestand = new Text(600,550,"Punkte: 0");
+        punktestand = new Text(600,550,"Punkte: 0", Color.WHITE);
 
         istEnde = false;
 
-        while(!istEnde){
+        while(!gameOver){
             if (fenster.keyLeftPressed()){
                 starship.move(-1, 0);
 
@@ -88,13 +95,28 @@ public class Spiel
 
                         asteroids[i].move(0, -750);
                         laser = null;
+                        punkte++;
 
                     }
                 }
 
 
             }
-            punkte++;
+
+            for(int i = 0; i<asteroids.length; i++) {
+                if (starship.getX() + starship.getWidth() > asteroids[i].getX() &&
+                        starship.getX() < asteroids[i].getX() + asteroids[i].getWidth() &&
+                        starship.getY() + starship.getHeight() > asteroids[i].getY() &&
+                        starship.getY() < asteroids[i].getY() + asteroids[i].getHeight()) {
+
+                    gameOver = true;
+                }
+            }
+
+
+
+
+
 
             punktestand.setText("Punkte: "+punkte);
             fenster.wait(1);

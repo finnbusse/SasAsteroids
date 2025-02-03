@@ -73,6 +73,8 @@ class Asteroid
         polygon1.add(22.0,56.0);
         polygon1.add(-1.0,43.0);
 
+        polygon1.setColor(Color.GRAY);
+
 
         polygon2 = new Polygon(13,9);
 
@@ -97,6 +99,7 @@ class Asteroid
 
         polygon4.add(-3.0,7.0);
         polygon4.add(7.0,9.0);
+
 
         //############################# E N D   O F   I N S E R T E D   C O D E   #########################################
         // 

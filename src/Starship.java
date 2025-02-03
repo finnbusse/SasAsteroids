@@ -288,4 +288,14 @@ class Starship
     public void setY(double y) {
         initY = y;
     }
+
+
+    public double getHeight() {
+        return 151;
+    };
+
+    public double getWidth() {
+        return 181;
+    };
+
 }
